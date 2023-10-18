@@ -19,7 +19,7 @@ let numero_c = +numeroIngresado;
 //isNaN -> intenta convertir el parámetro pasado a un número. Si el parámetro no se puede convertir, devuelve true; en caso contrario, devuelve false.
 
 //codigo normal
-/*
+//el isNaN es porque me aparecio como (NaN)
 if(isNaN(numero_c)){
    //por favor ingrese un nùmero
 }else{
@@ -29,7 +29,7 @@ if(numero_c >= 18)
 }else{
     alert("Acceso denegado, el usuario no es mayor de edad.")
 }
-}*/
+}
 
 //refactorización de código
 
