@@ -126,29 +126,59 @@ Deberemos elegir el bono que cobrará cada uno de los empleados y en caso de que
 
 
 //Empresa de Muebles: Jefe, Carpintero, Pintor, Fletero
-const Empresa = prompt("Ingrese su cargo: Jefe, Carpintero, Pintor, Fletero");
-//el bono de jefe es: 400000, carpintero 100000, pintor 50000, fletero 20000
-const sueldo = ("Su sueldo es de 420000$");
+const Empresa = prompt("Ingrese su cargo: Jefe, Carpintero, Pintor");
+//su sueldo es: 420000, carpintero 150000, pintor 100000, fletero 50000
+const sueldoJefe = ("Su sueldo es de 420000$");
+const sueldoCarpintero = ("su sueldo es de 350000$");
+const sueldoPintor = ("su sueldo es de 100000$");
+
 const bono = ("su bono es de 450000$");
 const impuesto = 770000;
 
 
 switch (Empresa) {
     case "Jefe":
-        let a = prompt(sueldo);
+        let a = prompt(sueldoJefe);
         let b = prompt(bono);
-        let resultado = +a + +b;
-        let resultado_Impuesto = resultado - 217500;
-        
-        if (resultado>= impuesto) {
-            alert("Su sueldo final es de: " + resultado_Impuesto + "$");
-    
+        let resultado = (+a + +b);
+        let resultado_Impuesto = resultado - (resultado * 0.25);
+
+        if (resultado >= impuesto) {
+            alert("Su sueldo final es de: " + resultado_Impuesto + "$ Impuestos 25%");
+
         } else {
             alert("Su sueldo final es de: " + resultado + "$");
-         
         }
-
         break;
+
+    case "Carpintero":
+        let c = prompt(sueldoCarpintero);
+        let d = prompt(bono);
+        let resultado2 = (+c + +d);
+        let resultado_Impuesto2 = resultado2 - (resultado2 * 0.25);
+
+        if (resultado2 >= impuesto) {
+            alert("Su sueldo final es de: " + resultado_Impuesto2 + "$ Impuestos 25%");
+
+        } else {
+            alert("Su sueldo final es de: " + resultado2 + "$");
+        }
+        break;
+
+    case "Pintor":
+        let e = prompt(sueldoPintor);
+        let f = prompt(bono);
+        let resultado3 = (+e + +f);
+        let resultado_Impuesto3 = resultado3 - (resultado3 * 0.25);
+
+        if (resultado3 >= impuesto) {
+            alert("Su sueldo final es de: " + resultado_Impuesto3 + "$ Impuestos 25%");
+
+        } else {
+            alert("Su sueldo final es de: " + resultado3 + "$");
+        }
+        break;
+
     default:
         alert("Ingrese su cargo salchicha :D")
 }
