@@ -1,4 +1,4 @@
-//Bucles-while-Do while-for
+//como recorrer un Bucle-while-Do while-for
 
 //Bucles es una estructura de control de datos que se repite mientras la condicion se cumpla.
 
@@ -10,7 +10,7 @@ let contador = 1;
 
 while(contador<=10){
 console.log(contador);
-contador++; 
+contador++;
 }
 */
 
@@ -49,7 +49,7 @@ let contador2 = 1;
 
 do {
     if (contador2 % 2 === 0) {
-        console.log(`${contador2} es par`)
+        console.log(`${contador2} impar`)
     } else {
         console.log(`${contador2}`)
     }
@@ -67,7 +67,7 @@ do {
 let cantcanciones = +prompt("cuantas canciones desea agregar")
 
 
-for (let c = 1; c <= cantcanciones; c++) {
+for (let contador = 1; contador <= cantcanciones; contador++) {
 
     let opcion = +prompt(` elija el numero de la canción
     1-Enanitos verdes-Mariposas
@@ -101,3 +101,57 @@ for (let c = 1; c <= cantcanciones; c++) {
 
 }
 */
+
+
+
+/* ACTIVIDADES: - Imprima la suma de todos los números impares entre 1 y 100
+- Imprime la tabla de multiplicar del 5
+- Realiza un script que escriba los números del 1 al 500, que indique cuales son múltiplos de 5 */
+
+
+//resultado 1
+//siempre el contador++ poner para que no se haga un bucle infinito
+/*
+let contador = 1;
+
+do {
+    if (contador % 2 === 0) {
+        console.log(`${contador} `);
+    } else {
+        console.log(`${contador} (es impar)`);
+    }
+    contador++;
+
+} while (contador <= 100);
+*/
+
+
+
+//resultado 2
+ /*
+let contador =1;1
+let tabla = 5;
+
+while(contador <= 10){
+console.log(`${contador}*${tabla} = ${tabla*contador}  `);
+contador++;
+};
+*/
+
+
+
+//resultado 3
+
+let contador = 1;
+
+do {
+    if (contador % 5 === 0) {
+        console.log(`${contador} (multiplo de 5)`)
+    } else {
+        console.log(`${contador}`)
+    }
+
+    contador++;
+
+} while (contador <= 500);
+

@@ -124,7 +124,6 @@ Una vez ingresado el puesto laboral, el usuario deberá ingresar el sueldo perci
 Deberemos elegir el bono que cobrará cada uno de los empleados y en caso de que la sumatoria de sueldo + bono sea mayor a 
 770000 deberemos extraer un 25% del total del sueldo (simulando imp a ganancias).*/
 
-
 //Empresa de Muebles: Jefe, Carpintero, Pintor, Fletero
 const Empresa = prompt("Ingrese su cargo: Jefe, Carpintero, Pintor");
 //su sueldo es: 420000, carpintero 150000, pintor 100000, fletero 50000
@@ -136,6 +135,7 @@ const bono = ("su bono es de 450000$");
 const impuesto = 770000;
 
 
+
 switch (Empresa) {
     case "Jefe":
         let a = prompt(sueldoJefe);
@@ -145,7 +145,6 @@ switch (Empresa) {
 
         if (resultado >= impuesto) {
             alert("Su sueldo final es de: " + resultado_Impuesto + "$ Impuestos 25%");
-
         } else {
             alert("Su sueldo final es de: " + resultado + "$");
         }
@@ -159,7 +158,6 @@ switch (Empresa) {
 
         if (resultado2 >= impuesto) {
             alert("Su sueldo final es de: " + resultado_Impuesto2 + "$ Impuestos 25%");
-
         } else {
             alert("Su sueldo final es de: " + resultado2 + "$");
         }
@@ -167,13 +165,13 @@ switch (Empresa) {
 
     case "Pintor":
         let e = prompt(sueldoPintor);
+        
         let f = prompt(bono);
         let resultado3 = (+e + +f);
         let resultado_Impuesto3 = resultado3 - (resultado3 * 0.25);
 
         if (resultado3 >= impuesto) {
             alert("Su sueldo final es de: " + resultado_Impuesto3 + "$ Impuestos 25%");
-
         } else {
             alert("Su sueldo final es de: " + resultado3 + "$");
         }
@@ -182,7 +180,6 @@ switch (Empresa) {
     default:
         alert("Ingrese su cargo salchicha :D")
 }
-
 alert("Vuelva Pronto :) ");
 
 
