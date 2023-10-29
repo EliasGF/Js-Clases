@@ -165,7 +165,7 @@ switch (Empresa) {
 
     case "Pintor":
         let e = prompt(sueldoPintor);
-        
+
         let f = prompt(bono);
         let resultado3 = (+e + +f);
         let resultado_Impuesto3 = resultado3 - (resultado3 * 0.25);
