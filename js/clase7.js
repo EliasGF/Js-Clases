@@ -21,6 +21,9 @@ alert("Bienvenido a nuestra calculadora")
 
 let salir = false;
 
+// El signo ! sirve para que sea el opuesto de false
+// el signo  \n es para saltear, como el br de html
+
 while (!salir) {
 
     let respuestaUsuario = prompt(`ingrese la operación \n 
@@ -35,7 +38,7 @@ while (!salir) {
             alert(`el resultado de la suma es ${suma()}`);
             break;
         case "2":
-            alert(`el resultado de la suma es ${resta()}`);
+            alert(`el resultado de la resta es ${resta()}`);
             break;
         case "3":
             alert(`el resultado de la division es ${division()}`);
