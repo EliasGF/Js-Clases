@@ -56,7 +56,7 @@
 
 
 //Funcion que valide
-// || -> oh
+// || -> Oh
 
 
 let valor_respuesta_de_funcion = mult();
