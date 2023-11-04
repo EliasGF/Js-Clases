@@ -106,7 +106,7 @@
 //     "123456",
 //     Date.now,
 //     "eliasfernandez@gmail.com",
-   
+
 // );
 
 
@@ -172,11 +172,11 @@ span_html.innerText = contador;
 
 console.log(span_html)
 
-add_btn.addEventListener("click", function(){
+add_btn.addEventListener("click", function () {
     contador++;
-    if(contador % 2 === 0){
+    if (contador % 2 === 0) {
         span_html.style.color = "red";
-    }else{
+    } else {
         span_html.style.color = "green";
     }
 
@@ -185,13 +185,14 @@ add_btn.addEventListener("click", function(){
 
 const remove_btn = document.getElementById("remove");
 
-remove_btn.addEventListener("click", function(){
+remove_btn.addEventListener("click", function () {
     contador--;
-    if(contador % 2 === 0){
+    if (contador % 2 === 0) {
         span_html.style.color = "red";
-    }else{
+    } else {
         span_html.style.color = "green";
     }
-
+    
     span_html.innerText = contador;
 })
+
