@@ -47,7 +47,6 @@ function refresh() {
 const message = document.getElementById("message");
 const btnSend = document.getElementById("send");
 const counterr = document.getElementById("counterr");
-
 let _message, _counter, _messages;
 
 
