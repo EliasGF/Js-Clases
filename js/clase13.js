@@ -101,6 +101,7 @@ let avengers = [
 
 console.log(avengers);
 
+// me salta error el JSON.parse buscarle solución
 
 // JSON: JAVASCRIP OBJECT NOTATION
 // JSON: Es una estructura de dator ya estarandizada, con la que los lenguajes pueden 
@@ -144,7 +145,7 @@ Debe ser convertido a un objeto nativo de JavaScript cuando se requiera acceder 
 // ]`
 // // aqui lo transformo 
 // // Aqui iria JSON.parse pero salta error solucionar luego.
-// let respuesta = JSONp.arse(alumnos);
+// let respuesta = JSON.parse(alumnos);
 
 // console.log(alumnos);
 // console.log(respuesta);

@@ -32,7 +32,6 @@ function refresh() {
 }
 
 
-
 // capturar los datos de un input
 // Cuando el usuario haga click en el bóton enviar
 // change -> cuando el elemento input recibe cambios en su valor
@@ -43,16 +42,12 @@ function refresh() {
 // incrementar el valor del contador que se encuentra en 
 // nuestro icono.
 
-
 const message = document.getElementById("message");
 const btnSend = document.getElementById("send");
 const counterr = document.getElementById("counterr");
 let _message, _counter, _messages;
 
 
-// el signo (?) pregunta internamente si message es null o no es null
-// me ahorra if(message !== null){ 
-// message.addeventlistener; }
 
 message?.addEventListener("change", function (event) {
     _message = event.target.value;
@@ -69,9 +64,9 @@ btnSend?.addEventListener("click", function () {
 });
 
 function refresh_Notification() {
-    counterr.innerText = _messages.lenght;
+  counterr.innerText = _messages.length;
 
-    if (_messages.lenght > 0) {
+    if (_messages.length > 0) {
         counterr.style.padding = "auto";
         counterr.style.borderRadius = "50%";
         counterr.style.backgroundColor = "orange";
