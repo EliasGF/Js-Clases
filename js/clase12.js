@@ -45,9 +45,11 @@ function refresh() {
 const message = document.getElementById("message");
 const btnSend = document.getElementById("send");
 const counterr = document.getElementById("counterr");
-let _message, _counter, _messages;
+let _message,  _messages;
 
-
+// el signo (?) pregunta internamente si message es null o no es null
+// me ahorra if(message !== null){
+// message.adeventlistener;}
 
 message?.addEventListener("change", function (event) {
     _message = event.target.value;
@@ -67,9 +69,8 @@ function refresh_Notification() {
   counterr.innerText = _messages.length;
 
     if (_messages.length > 0) {
-        counterr.style.padding = "auto";
-        counterr.style.borderRadius = "50%";
-        counterr.style.backgroundColor = "orange";
+    
+        counterr.style.color="red";
     }
 }
 

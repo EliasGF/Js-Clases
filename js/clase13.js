@@ -112,90 +112,87 @@ Debe ser convertido a un objeto nativo de JavaScript cuando se requiera acceder 
 Ésto no es un problema, dado que JavaScript posee un objeto global JSON que tiene los métodos disponibles para convertir entre ellos*/
 
 // objeto json
-// let alumnos = `[
-//     {
-//         "id":1,
-//         "nombre": "juan",
-//         "apellido": "perez",
-//         "edad": 20,
-//         "destacado": true
-//     },
-//     {
-//         "id":2,
-//         "nombre": "Elias",
-//         "apellido": "Fernandez",
-//         "edad": 18,
-//         "destacado": true
-//     },
-//     {
-//         "id":3,'?
-//         "nombre": "Lucas",
-//         "apellido": "Brum",
-//         "edad": 22,
-//         "destacado": false
-//     },
-//     {
-//         "id":4,
-//         "nombre": "Ana",
-//         "apellido": "Martinez",
-//         "edad": 19,
-//         "destacado": true
-//     }
+let alumnos = `[
+    {
+        "id":1,
+        "nombre": "juan",
+        "apellido": "perez",
+        "edad": 20,
+        "destacado": true
+    },
+    {
+        "id":2,
+        "nombre": "Elias",
+        "apellido": "Fernandez",
+        "edad": 18,
+        "destacado": true
+    },
+    {
+        "id":3,
+        "nombre": "Lucas",
+        "apellido": "Brum",
+        "edad": 22,
+        "destacado": false
+    },
+    {
+        "id":4,
+        "nombre": "Ana",
+        "apellido": "Martinez",
+        "edad": 19,
+        "destacado": true
+    }
 
-// ]`
-// // aqui lo transformo 
-// // Aqui iria JSON.parse pero salta error solucionar luego.
-// let respuesta = JSON.parse(alumnos);
+]`
+// aqui lo transformo 
 
-// console.log(alumnos);
-// console.log(respuesta);
-
-
-// // CRUD ABM
-
-// /*
-// Create
-// read
-// update
-// delete
-
-// alta
-// baja
-// modificaciòn
-// */
+let respuesta = JSON.parse(alumnos);
+console.log(alumnos);
+console.log(respuesta);
 
 
-// function addAlumno(id, nombre, apellido, edad, destacado) {
-//     respuesta.push({ id, nombre, apellido, edad, destacado })
-//     updateAlumno();
-// }
+// CRUD ABM
 
-// function deleteAlumno(id) {
-//     respuesta = respuesta.filter(function (alumno) 
-//     {
-//         return alumno.id !== id
-//     })
-// }
+/*
+Create
+read
+update
+delete
 
-// function editAlumno (id,nombre,apellido,edad,destacado){
-//  let alumnoToEdit = respuesta.find(function(alumno){
-//     return alumno.id === id});
-//     if(nombre != ""){
-//         alumnoToEdit.nombre = nombre;
-//     }
- 
-//     alumnoToEdit.apellido= apellido;
-//     alumnoToEdit.destacado = destacado;
-//     alumnoToEdit.edad = edad;
-//     updateAlumno();
-// }
+alta
+baja
+modificaciòn
+*/
 
-// function updateAlumno() {
-//     alumnos = JSON.stringify(respuesta)
-//     console.log(alumnos);
-// }
 
-// addAlumno(6, "Elias", "Fernandez", 35, false)
-// deleteAlumno(2);
+function addAlumno(id, nombre, apellido, edad, destacado) {
+    respuesta.push({ id, nombre, apellido, edad, destacado })
+    updateAlumno();
+}
 
-// editAlumno(5,"lucas","Rivas",20,false)
+function deleteAlumno(id) {
+    respuesta = respuesta.filter(function (alumno) 
+    {
+        return alumno.id !== id
+    })
+    updateAlumno();
+}
+
+function editAlumno (id,nombre,apellido,edad,destacado){
+ let alumnoToEdit = respuesta.find(function(alumno){
+    return alumno.id === id});
+
+    alumnoToEdit.apellido= apellido;
+    alumnoToEdit.destacado = destacado;
+    alumnoToEdit.edad = edad;
+    updateAlumno();
+}
+
+function updateAlumno() {
+    alumnos = JSON.stringify(respuesta)
+    console.log(alumnos);
+}
+
+addAlumno(6, "Elias", "Fernandez", 35, false)
+deleteAlumno(2);
+
+
