@@ -35,3 +35,20 @@ form div button:hover {
     cursor: pointer;
 }
 
+form a {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: x-small;
+    color: rgb(26, 133, 199);
+    text-decoration: none;
+}
+
+form div a {
+    margin: 0.2rem;
+}
+
+ul li {
+    list-style: none;
+margin-left: -2rem;
+}

@@ -1,36 +1,4 @@
-// Practica manejo DOM
-/*
-const spn = document.getElementById("counter")
-let counter = 0;
-// binding: una asociacion entre un elemento estatico 
-// y un elemento dinámico
-
-document.getElementById("add").addEventListener("click", function () {
-    addcounter(1)
-
-});
-
-document.getElementById("addFive").addEventListener("click", function () {
-    addcounter(5)
-
-});
-
-document.getElementById("addSix").addEventListener("click", function () {
-    addcounter(10)
-
-});
-
-
-function addcounter(number) {
-    counter += number;
-    refresh();
-}
-
-function refresh() {
-    // se encarga de actualizar con los últimos datos 
-    // el html y modificar el valor del span
-    spn.innerText = counter;
-}*/
+// Local storage - Que es? - Almacenar y recuperar datos de local storage - Ejercicio practico
 
 // reference
 const btnRegister = document.getElementById("register");
@@ -43,7 +11,18 @@ configErrorMessage();
 
 // Variables
 let _email, _password, _repetPassword = "";
+
+const KEYS = {
+    USERS_KEY: "usuarios"
+}
+
 let users = [];
+let lsUsers = localStorage.getItem(KEYS.USERS_KEY);
+if (lsUsers) {
+    console.log(lsUsers);
+    users = JSON.parse(lsUsers);
+    refresh();
+}
 
 // Events
 email.addEventListener("change", function (e) {
@@ -85,7 +64,10 @@ function addUser() {
         password: _password,
     };
     users.push(newUser);
+    let json = JSON.stringify(users)
+    localStorage.setItem(KEYS.USERS_KEY, json);
 }
+
 
 function refresh() {
     userList.innerHTML = "";
@@ -97,7 +79,7 @@ function refresh() {
         //   appendChild agrega un elemento HTML a la lisde de elemento HTML al final.
         li.appendChild(spanMail);
         userList.appendChild(li);
-    })
+    });
 }
 
 function validateUser() {
@@ -105,11 +87,10 @@ function validateUser() {
         throw new Error("El email es obligatorio");
     } else if (!_password || _password.trim() === "") {
         throw new Error("La contraseña es obligatorio");
-    }else if (!_repetPassword || _repetPassword.trim() === ""){
-        throw new Error ("Repita la contraseña");
+    } else if (!_repetPassword || _password.trim() === "") {
+        throw new Error("Repita la contraseña");
     }
 }
-
 function configErrorMessage() {
     spanMessage.style.color = "red";
     spanMessage.style.fontSize = "0.6rem";
@@ -117,6 +98,7 @@ function configErrorMessage() {
     spanMessage.style.textAlign = "center";
 
 }
+
 
 // Clases
 class user {
