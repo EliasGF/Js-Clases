@@ -108,3 +108,18 @@ class user {
         this.repetPassword = repetPassword;
     }
 }
+
+
+// podemos crear etiquetas html desde js
+
+// ejemplo:
+/*
+class myTag extends HTMLElement {
+    constructor() {
+        super();
+        this.innerHTML = "Hello word";
+    }
+}
+
+customElements.define("tag-custom", myTag);
+*/
